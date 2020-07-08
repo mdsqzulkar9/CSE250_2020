@@ -150,8 +150,7 @@ namespace ubcse{
          * 
 		 */
 		vector<T>(T& start, T& end){
-
-			///*
+	
 			//TO DO : put your code here (for range constructor)
 			T type_size;
 			T* s_ptr = &start;
@@ -173,7 +172,6 @@ namespace ubcse{
 			for(int i = 0 ; i < num_items ; i++ )
 				data_array[i] = *(s_ptr + i);
 			
-			//*/
 
 		} // end of range constructor
 
@@ -190,6 +188,7 @@ namespace ubcse{
 		 */
 		~vector(){
 			// put your code here (for destructor)
+			delete[] data_array;
 		}
 
 
@@ -295,7 +294,6 @@ namespace ubcse{
 		std::cout << "Data: ";
 		if (num_items == 0){
 			std::cout << "Vector is empty." << std::endl;
-			
 			std::cout << "Number of items: " << num_items << std::endl;
 			std::cout << "Current capacity: " << current_capacity << std::endl;
 			return;
